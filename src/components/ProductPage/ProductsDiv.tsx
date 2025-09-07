@@ -20,15 +20,15 @@ export const ProductsDiv:FC<ProductsDivInterface>=({Searchparams})=> {
       {
 
         Searchparams? SearchProduct.product?.map((p)=>(
-          <ProductCard key={p?.id} product={p as Product} />
+          <ProductCard key={p?.id} product={{ ...p, stock: Boolean(p?.stock) } as Product} />
         )):Selectedcategoies
                 ? SearchProduct.product?.filter((products) =>
             products?.categories?.some((category) => category === Selectedcategoies)
           ).map((e) => (
-            <ProductCard key={e?.id} product={e as Product} />
+            <ProductCard key={e?.id} product={{ ...e, stock: Boolean(e?.stock) } as Product} />
           ))
         : SearchProduct.product?.map((e) => (
-            <ProductCard key={e?.id} product={e as Product} />
+            <ProductCard key={e?.id} product={{ ...e, stock: Boolean(e?.stock) } as Product} />
           ))
       }
       

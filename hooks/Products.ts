@@ -8,9 +8,14 @@ const mockProducts = [
     images: ["/1.jpg"],
     stock: 50,
     categories: ["Food", "Premium"],
+    sellerId: "seller-1",
     seller: {
+      id: "seller-1",
       firstName: "John",
-      lastName: "Doe"
+      lastName: "Doe",
+      email: "john.doe@example.com",
+      createdAt: new Date("2024-01-01"),
+      profileImageURL: null
     }
   },
   {
@@ -21,9 +26,14 @@ const mockProducts = [
     images: ["/2.jpeg"],
     stock: 25,
     categories: ["Accessories", "Comfort"],
+    sellerId: "seller-2",
     seller: {
+      id: "seller-2",
       firstName: "Jane",
-      lastName: "Smith"
+      lastName: "Smith",
+      email: "jane.smith@example.com",
+      createdAt: new Date("2024-01-15"),
+      profileImageURL: null
     }
   },
   {
@@ -34,9 +44,14 @@ const mockProducts = [
     images: ["/3.webp"],
     stock: 100,
     categories: ["Toys", "Interactive"],
+    sellerId: "seller-3",
     seller: {
+      id: "seller-3",
       firstName: "Mike",
-      lastName: "Johnson"
+      lastName: "Johnson",
+      email: "mike.johnson@example.com",
+      createdAt: new Date("2024-02-01"),
+      profileImageURL: null
     }
   }
 ];
